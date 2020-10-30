@@ -14,4 +14,13 @@ public class Triangle{
 	v3 = new Point(x3, y3);
     }
 
+    public double getPerimeter(){
+        return v1.distanceTo(v2) + v1.distanceTo(v3) + v2.distanceTo(v3);
+    }
+
+    public double getArea(){
+        double s = getPerimeter()/2;
+        return Math.sqrt(s*(s- v1.distanceTo(v2))*(s- v1.distanceTo(v3))*(s- v2.distanceTo(v3)));
+    }
+
 }
