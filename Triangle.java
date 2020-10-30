@@ -37,6 +37,9 @@ public class Triangle{
     }
 
     public void setVertex(int index, Point newP){
-	//
+	if (index==0) v1=newP;
+	if (index==1) v2=newP;
+	if (index==2) v3=newP;
     }
+
 }
