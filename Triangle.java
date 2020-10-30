@@ -24,16 +24,16 @@ public class Triangle{
     }
 
     public String classify(){
-	double a = Math.round(v1.distanceTo(v2)*10000)/10000;
-	double b = Math.round(v1.distanceTo(v3)*10000)/10000;
-	double c = Math.round(v2.distanceTo(v3)*10000)/10000;
+	double a = Math.round(v1.distanceTo(v2)*10000.0)/10000.0;
+	double b = Math.round(v1.distanceTo(v3)*10000.0)/10000.0;
+	double c = Math.round(v2.distanceTo(v3)*10000.0)/10000.0;
 	if (a==b && b==c) return "equilateral";
 	if (a==b || a==c || b==c) return "isosceles";
 	return "scalene";
     }
 
     public String toString(){
-	return "v1"+v1.toString()+" v2"+v2.toString()+" v3"+v3.toString();
+	return "v1("+v1.getX()+", "+v1.getY()+") v2("+v2.getX()+", "+v2.getY()+") v3("+v3.getX()+", "+v3.getY()+")";
     }
 
     public void setVertex(int index, Point newP){
